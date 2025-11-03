@@ -33,7 +33,7 @@ export const ContactPage: React.FC = () => {
                          <p className="text-gray-700 dark:text-gray-300 mb-4">
                            You can find the source code and more of my work on GitHub.
                         </p>
-                        <a href="https://github.com/ankushpramanik" target="_blank" rel="noopener noreferrer" className="btn-github">
+                        <a href="https://github.com/pramanikankush/Youtube-stats-extension-builder" target="_blank" rel="noopener noreferrer" className="btn-github">
                             <GithubIcon />
                             <span>GitHub</span>
                         </a>
