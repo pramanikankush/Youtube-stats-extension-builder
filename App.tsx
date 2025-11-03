@@ -10,6 +10,7 @@ import { LoadingSpinner, YouTubeIcon } from './components/icons';
 import { Navbar } from './components/Navbar';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
+import { env } from './config/env';
 
 const App: React.FC = () => {
     const [step, setStep] = useState<Step>('input');
