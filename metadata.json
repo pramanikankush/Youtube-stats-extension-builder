@@ -1,0 +1,5 @@
+{
+  "name": "YouTube Stats Tracker Builder",
+  "description": "A user-friendly tool to generate a personalized Chrome extension for tracking YouTube channel statistics without any coding experience.",
+  "requestFramePermissions": []
+}

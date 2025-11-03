@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Stats Tracker Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes animated-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+        .group:hover .group-hover-block { display: block; }
+        .animate-gradient {
+            animation: animated-gradient 3s ease infinite;
+        }
+
+        /* GitHub Button Styles */
+        .btn-github {
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.5rem;
+          align-items: center;
+          border: 1px solid transparent;
+          transition: all 0.3s ease;
+          border-radius: 100px;
+          font-weight: 600;
+          place-content: center;
+          padding: 0.6rem 1.2rem;
+          font-size: 0.9rem;
+          line-height: 1rem;
+          background-color: #374151; /* gray-700 */
+          color: #f3f4f6; /* gray-100 */
+          box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .dark .btn-github {
+             background-color: #1f2937; /* gray-800 */
+        }
+
+        .btn-github:hover {
+          border-color: rgba(239, 68, 68, 0.4); /* red-500 */
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(239, 68, 68, 0.15);
+          background-color: #1f2937; /* gray-800 */
+        }
+        .dark .btn-github:hover {
+            background-color: #374151; /* gray-700 */
+        }
+    </style>
+    <script>
+        // Set theme on page load to prevent FOUC (Flash of Unstyled Content)
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
