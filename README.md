@@ -3,6 +3,7 @@
 A user-friendly web application to generate a personalized Chrome extension for tracking any YouTube channel's statistics, no coding required.
 
  <!-- Replace with a URL to a screenshot of your app -->
+ ## Demo : https://youtube-stats-extension-builder.vercel.app/
 
 ## ✨ Features
 
